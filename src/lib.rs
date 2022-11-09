@@ -10,11 +10,11 @@
 //! ```
 //! use rustkov::prelude::*;
 //!
-//! fn main() {
+//! fn main() -> Result<()> {
 //!     
 //!     // The brain is created using composition.
 //!     let mut brain = Brain::new()
-//!         .from_dataset("your_dataset.txt")
+//!         .from_dataset("your_dataset.txt")?
 //!         .get();
 //!
 //!     // As we didn't specify a config file to the brain,
@@ -24,10 +24,11 @@
 //!
 //!     // `brain.generate` returns an option, as the reply_chance config might
 //!     // be less than 1.
-//!     if let Some(response) = brain.generate("Hello there!") {
+//!     if let Some(response) = brain.generate("Hello there!")? {
 //!         println!("{}", response);
 //!     }
 //! }
+//!
 //! ```
 //!
 //!

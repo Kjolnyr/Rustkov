@@ -1,0 +1,9 @@
+---
+max_ingestion_state_size: 5
+training: true
+mute: false
+reply_rate: 1.0
+min_generation_state_size: 2
+max_generation_state_size: 4
+excluded_words: []
+
